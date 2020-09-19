@@ -24,8 +24,8 @@ end
     BankAccount.create(user_id: User.all.first.id, bank_name: Faker::Bank.name, account_type: "Checking")
 end
 
-15.times do
-    UserCategory.create(user_id: User.all.first.id, category_id: Category.all.sample.id, amount: rand(-500..500).to_f, date: Faker::Date.between(from: '2020-01-01', to: '2020-09-30'))
+6.times do
+    UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all.sample.id, category_name: Category.all.sample.name, amount: rand(0..2000).to_f, date: Faker::Date.between(from: '2020-01-01', to: '2020-09-30'))
 end
 
 30.times do
