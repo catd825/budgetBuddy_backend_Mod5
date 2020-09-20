@@ -28,14 +28,6 @@ end
     UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all.sample.id, category_name: Category.all.sample.name, amount: rand(0..2000).to_f, date: Faker::Date.between(from: '2020-01-01', to: '2020-09-30'))
 end
 
-30.times do
+10.times do
     Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all.sample.id, category_name: Category.all.sample.name, amount: rand(-500..500).to_f, date: Faker::Date.between(from: '2020-01-01', to: '2020-09-30'), description: Faker::Commerce.product_name, trans_type: "transtype")
 end
-
-
-# t.bigint "category_id", null: false
-#     t.bigint "bank_account_id", null: false
-#     t.date "date"
-#     t.float "amount"
-#     t.string "trans_type"
-#     t.string "description"
