@@ -27,7 +27,7 @@ Category.create(name: "Health & Fitness")
 Category.create(name: "Transportation")
 Category.create(name: "Entertainment")
 Category.create(name: "Donations")
-# Category.create(name: "Income")
+Category.create(name: "Income")
 
 
 3.times do
