@@ -23,6 +23,10 @@ Category.create(name: "Dining Out")
 Category.create(name: "Shopping")
 Category.create(name: "Misc")
 Category.create(name: "Savings")
+Category.create(name: "Health & Fitness")
+Category.create(name: "Transportation")
+Category.create(name: "Entertainment")
+Category.create(name: "Donations")
 # Category.create(name: "Income")
 
 
