@@ -16,18 +16,42 @@ User.destroy_all
     User.create(name: Faker::Name.name, username: Faker::Name.middle_name, password: rand(123456..6123456).to_s)
 end
 
-7.times do
-    Category.create(name: Faker::Commerce.department)
-end
+Category.create(name: "Rent/Mortgage")
+Category.create(name: "Utilities")
+Category.create(name: "Groceries")
+Category.create(name: "Dining Out")
+Category.create(name: "Shopping")
+Category.create(name: "Misc")
+Category.create(name: "Savings")
+# Category.create(name: "Income")
+
 
 3.times do
     BankAccount.create(user_id: User.all.first.id, bank_name: Faker::Bank.name, account_type: "Checking")
 end
 
-6.times do
-    UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all.sample.id, category_name: Category.all.sample.name, amount: rand(0..2000).to_f, date: Faker::Date.between(from: '2020-01-01', to: '2020-09-30'))
-end
 
-10.times do
-    Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all.sample.id, category_name: Category.all.sample.name, amount: rand(-500..500).to_f, date: Faker::Date.between(from: '2020-01-01', to: '2020-09-30'), description: Faker::Commerce.product_name, trans_type: "transtype")
-end
+UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: 2000.00, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'))
+UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[1].id, category_name: Category.all[1].name, amount: 200.00, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'))
+UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: 150.00, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'))
+UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[3].id, category_name: Category.all[3].name, amount: 100.00, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'))
+UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[4].id, category_name: Category.all[4].name, amount: 120.00, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'))
+UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[5].id, category_name: Category.all[5].name, amount: 300.00, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'))
+UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[6].id, category_name: Category.all[6].name, amount: 300.00, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'))
+# UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[7].id, category_name: Category.all[7].name, amount: -3170, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'))
+# UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[6].id, category_name: Category.all[6].name, amount: rand(0..2000).to_f, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'))
+
+
+# Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[7].id, category_name: Category.all[7].name, amount: 3170, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'), description: "Paycheck", trans_type: "transtype")
+Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[1].id, category_name: Category.all[1].name, amount: -100, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'), description: "Con Ed Sept Bill", trans_type: "transtype")
+Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: -2000, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'), description: "Rent", trans_type: "transtype")
+Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: -60.55, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'), description: "Trader Joe's", trans_type: "transtype")
+Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[3].id, category_name: Category.all[3].name, amount: -50.83, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'), description: "Thai Food", trans_type: "transtype")
+Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[4].id, category_name: Category.all[4].name, amount: -40.52, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'), description: "Gift for Niece", trans_type: "transtype")
+Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[5].id, category_name: Category.all[5].name, amount: -60.21, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'), description: "Misc supplies from Amazon", trans_type: "transtype")
+Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[6].id, category_name: Category.all[6].name, amount: -300, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'), description: "Savings Goal", trans_type: "transtype")
+Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[5].id, category_name: Category.all[5].name, amount: -40.21, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'), description: "Lamp", trans_type: "transtype")
+Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[4].id, category_name: Category.all[4].name, amount: -80.23, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'), description: "New Jacket", trans_type: "transtype")
+Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[3].id, category_name: Category.all[3].name, amount: -32.32, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'), description: "Pizza", trans_type: "transtype")
+Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: -40, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'), description: "Key Food", trans_type: "transtype")
+# Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: rand(-500..500).to_f, date: Faker::Date.between(from: '2020-09-30', to: '2020-09-30'), description: Faker::Commerce.product_name, trans_type: "transtype")
