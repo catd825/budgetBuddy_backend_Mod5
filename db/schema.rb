@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_18_023045) do
+ActiveRecord::Schema.define(version: 2020_09_21_184208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(version: 2020_09_18_023045) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "category_transactions", force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.bigint "transaction_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.float "amount"
+    t.date "date"
+    t.string "category_name"
+    t.index ["category_id"], name: "index_category_transactions_on_category_id"
+    t.index ["transaction_id"], name: "index_category_transactions_on_transaction_id"
   end
 
   create_table "transactions", force: :cascade do |t|
@@ -53,6 +65,7 @@ ActiveRecord::Schema.define(version: 2020_09_18_023045) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "category_name"
     t.string "user_name"
+    t.string "trans_type"
     t.index ["category_id"], name: "index_user_categories_on_category_id"
     t.index ["user_id"], name: "index_user_categories_on_user_id"
   end
@@ -66,6 +79,8 @@ ActiveRecord::Schema.define(version: 2020_09_18_023045) do
   end
 
   add_foreign_key "bank_accounts", "users"
+  add_foreign_key "category_transactions", "categories"
+  add_foreign_key "category_transactions", "transactions"
   add_foreign_key "transactions", "bank_accounts"
   add_foreign_key "transactions", "categories"
   add_foreign_key "user_categories", "categories"
