@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_21_184208) do
+ActiveRecord::Schema.define(version: 2020_09_22_170135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2020_09_21_184208) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "category_name"
+    t.integer "month"
     t.index ["bank_account_id"], name: "index_transactions_on_bank_account_id"
     t.index ["category_id"], name: "index_transactions_on_category_id"
   end
@@ -66,6 +67,7 @@ ActiveRecord::Schema.define(version: 2020_09_21_184208) do
     t.string "category_name"
     t.string "user_name"
     t.string "trans_type"
+    t.integer "month"
     t.index ["category_id"], name: "index_user_categories_on_category_id"
     t.index ["user_id"], name: "index_user_categories_on_user_id"
   end
