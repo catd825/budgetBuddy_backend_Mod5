@@ -25,7 +25,6 @@ class TransactionsController < ApplicationController
 
     def find_trans
         @transaction = Transaction.find(params[:id])
-
     end
 
 

@@ -33,7 +33,12 @@ class UserCategoriesController < ApplicationController
 
     private
 
+    def budget_params
+        params.require(:user_category).permit(:category_id, :user_id, :amount, :category_name, :date, :trans_type, :month, :user_name) 
+    end
 
-
+    def find_budget
+        @user_category = UserCategory.find(params[:id])
+    end
 
 end
