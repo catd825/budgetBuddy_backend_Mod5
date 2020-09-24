@@ -62,8 +62,6 @@ UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, 
 
 
 
-
-
 Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[11].id, category_name: Category.all[11].name, amount: 3170, date: Date.new(2020,9,30), month: 9, description: "Paycheck", trans_type: "Income")
 Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[1].id, category_name: Category.all[1].name, amount: -100, date: Date.new(2020,9,30), month: 9, description: "Con Ed Sept Bill", trans_type: "Expense")
 Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: -2000, date: Date.new(2020,9,30), month: 9, description: "Rent", trans_type: "Expense")
@@ -74,14 +72,14 @@ Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Cate
 Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[5].id, category_name: Category.all[5].name, amount: -40.21, date: Date.new(2020,9,30), month: 9, description: "Lamp", trans_type: "Expense")
 Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[4].id, category_name: Category.all[4].name, amount: -80.23, date: Date.new(2020,9,30), month: 9, description: "New Jacket", trans_type: "Expense")
 Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[3].id, category_name: Category.all[3].name, amount: -32.32, date: Date.new(2020,9,30), month: 9, description: "Pizza", trans_type: "Expense")
-Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: -40, date: Date.new(2020,9,30), month: 9, description: "Key Food", trans_type: "Expense")
+Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: -750, date: Date.new(2020,9,30), month: 9, description: "Key Food", trans_type: "Expense")
 Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[10].id, category_name: Category.all[10].name, amount: -50, date: Date.new(2020,9,30), month: 9, description: "ACLU", trans_type: "Expense")
 
 
 Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[11].id, category_name: Category.all[11].name, amount: 3170, date: Date.new(2020,8,30), month: 8, description: "Paycheck", trans_type: "Income")
 Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[11].id, category_name: Category.all[11].name, amount: 100, date: Date.new(2020,8,30), month: 8, description: "Birthday Gift", trans_type: "Income")
 Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[1].id, category_name: Category.all[1].name, amount: -100, date: Date.new(2020,8,30), month: 8, description: "Con Ed Aug Bill", trans_type: "Expense")
-Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: -2000, date: Date.new(2020,8,30), month: 8, description: "Rent", trans_type: "Expense")
+Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: -3000, date: Date.new(2020,8,30), month: 8, description: "Rent", trans_type: "Expense")
 Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: -60.55, date: Date.new(2020,8,30), month: 8, description: "Trader Joe's", trans_type: "Expense")
 Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[3].id, category_name: Category.all[3].name, amount: -50.83, date: Date.new(2020,8,30), month: 8, description: "Italian Food", trans_type: "Expense")
 Transaction.create(bank_account_id: BankAccount.all.sample.id, category_id: Category.all[5].id, category_name: Category.all[5].name, amount: -60.21, date: Date.new(2020,8,30), month: 8, description: "Shampoo", trans_type: "Expense")
