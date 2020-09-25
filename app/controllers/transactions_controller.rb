@@ -8,6 +8,16 @@ class TransactionsController < ApplicationController
         render json: transactions.to_json
     end
 
+    def new
+        transaction = Transaction.new
+    end
+
+    def create
+        transaction = Transaction.create(budget_params)
+        render json: transaction.to_json
+    end
+
+
     def update
         @transaction.update(trans_params)
         if @transaction.valid?

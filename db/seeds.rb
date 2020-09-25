@@ -13,7 +13,7 @@ BankAccount.destroy_all
 User.destroy_all
 
 1.times do
-    User.create(name: Faker::Name.name, username: Faker::Name.middle_name, password: rand(123456..6123456).to_s)
+    User.create(name: Faker::Name.name, username: Faker::Name.middle_name, password_digest: rand(123456..6123456).to_s)
 end
 
 Category.create(name: "Rent/Mortgage")
