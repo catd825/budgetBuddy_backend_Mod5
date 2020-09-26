@@ -27,6 +27,8 @@ class TransactionsController < ApplicationController
         end
     end
 
+
+
     private 
 
     def trans_params

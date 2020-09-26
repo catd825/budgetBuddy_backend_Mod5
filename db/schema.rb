@@ -30,18 +30,6 @@ ActiveRecord::Schema.define(version: 2020_09_25_151707) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "category_transactions", force: :cascade do |t|
-    t.bigint "category_id", null: false
-    t.bigint "transaction_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.float "amount"
-    t.date "date"
-    t.string "category_name"
-    t.index ["category_id"], name: "index_category_transactions_on_category_id"
-    t.index ["transaction_id"], name: "index_category_transactions_on_transaction_id"
-  end
-
   create_table "transactions", force: :cascade do |t|
     t.bigint "category_id", null: false
     t.bigint "bank_account_id", null: false
@@ -80,8 +68,6 @@ ActiveRecord::Schema.define(version: 2020_09_25_151707) do
   end
 
   add_foreign_key "bank_accounts", "users"
-  add_foreign_key "category_transactions", "categories"
-  add_foreign_key "category_transactions", "transactions"
   add_foreign_key "transactions", "bank_accounts"
   add_foreign_key "transactions", "categories"
   add_foreign_key "user_categories", "categories"

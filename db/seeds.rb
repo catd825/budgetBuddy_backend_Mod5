@@ -12,9 +12,14 @@ Category.destroy_all
 BankAccount.destroy_all
 User.destroy_all
 
-1.times do
-    User.create(name: Faker::Name.name, username: Faker::Name.middle_name, password_digest: rand(123456..6123456).to_s)
-end
+# 1.times do
+#     User.create(name: "Cathy", username: "catd825", password_digest: "password")
+# end
+
+
+User.create!(name: 'Cathy',
+             username: 'catd825',
+             password_digest: BCrypt::Password.create('password')) 
 
 Category.create(name: "Rent/Mortgage")
 Category.create(name: "Utilities")
