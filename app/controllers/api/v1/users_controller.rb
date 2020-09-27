@@ -27,6 +27,24 @@ class Api::V1::UsersController < ApplicationController
       end
 
 
+      def retrieve_bank_accounts
+        bank_accounts = @user.bank_accounts
+        bank_accounts = bank_accounts.sort_by{ |bank_account| [bank_account.created_at, bank_account.updated_at].max }.reverse!
+        render json: bank_accounts.to_json
+      end
+
+      def retrieve_categories
+        categories = @user.categories
+        categories = categories.sort_by{ |category| [category.created_at, category.updated_at].max }.reverse!
+        render json: categories.to_json
+      end
+
+      def retrieve_user_categories  
+        user_categories = @user.user_categories
+        user_categories = user_categories.sort_by{ |user_category| [user_category.created_at, user_category.updated_at].max }.reverse!
+        render json: user_categories.to_json
+      end
+
       private
       def user_params
         params.require(:user).permit(:username, :password, :name)
