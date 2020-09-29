@@ -3,7 +3,7 @@ class UserCategoriesController < ApplicationController
 
     def index
         user_categories = UserCategory.all
-        user_categories = user_categories.sort_by{ |budget| budget.month }.reverse!
+        user_categories = user_categories.sort_by{ |budget| budget.category_name }
         byebug
         render json: user_categories.to_json
     end
