@@ -22,26 +22,26 @@ class Api::V1::UsersController < ApplicationController
       
       def retrieve_transactions
         transactions = @user.transactions
-        transactions = transactions.sort_by{ |transaction| [transaction.created_at, transaction.updated_at].max }.reverse!
+        transactions = transactions.sort_by{ |transaction| transaction.date }.reverse!
         render json: transactions.to_json
       end
 
 
       def retrieve_bank_accounts
         bank_accounts = @user.bank_accounts
-        bank_accounts = bank_accounts.sort_by{ |bank_account| [bank_account.created_at, bank_account.updated_at].max }.reverse!
+        bank_accounts = bank_accounts.sort_by{ |bank_account| [bank_account.created_at, bank_account.updated_at].max }
         render json: bank_accounts.to_json
       end
 
       def retrieve_categories
         categories = @user.categories
-        categories = categories.sort_by{ |category| [category.created_at, category.updated_at].max }.reverse!
+        categories = categories.sort_by{ |category| category.name }
         render json: categories.to_json
       end
 
       def retrieve_user_categories  
         user_categories = @user.user_categories
-        user_categories = user_categories.sort_by{ |user_category| [user_category.created_at, user_category.updated_at].max }.reverse!
+        user_categories = user_categories.sort_by{ |user_category| user_category.category_name }
         render json: user_categories.to_json
       end
 

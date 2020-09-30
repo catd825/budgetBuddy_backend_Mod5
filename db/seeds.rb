@@ -49,7 +49,7 @@ UserCategory.create(user_id: User.all.second.id, user_name: User.all.second.name
 UserCategory.create(user_id: User.all.second.id, user_name: User.all.second.name, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: 150.00, month: 9,trans_type: "Expense")
 
 
-UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: 1500.00, month: 8, trans_type: "Expense")
+UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: 900.00, month: 8, trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[1].id, category_name: Category.all[1].name, amount: 300.00, month: 8,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: 210.00, month: 8,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[3].id, category_name: Category.all[3].name, amount: 100.00, month: 8,trans_type: "Expense")
@@ -63,38 +63,38 @@ UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, 
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[12].id, category_name: Category.all[12].name, amount: 45, month: 8,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[10].id, category_name: Category.all[10].name, amount: -3000, month: 8,trans_type: "Income")
 
-UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: 1500.00, month: 9, trans_type: "Expense")
+UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: 900.00, month: 9, trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[1].id, category_name: Category.all[1].name, amount: 200.00, month: 9,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: 200.00, month: 9,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[3].id, category_name: Category.all[3].name, amount: 200.00, month: 9,trans_type: "Expense")
-UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[4].id, category_name: Category.all[4].name, amount: 100.00, month: 9,trans_type: "Expense")
+# UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[4].id, category_name: Category.all[4].name, amount: 100.00, month: 9,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[5].id, category_name: Category.all[5].name, amount: 300.00, month: 9,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[6].id, category_name: Category.all[6].name, amount: 50, month: 9,trans_type: "Expense")
-UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[7].id, category_name: Category.all[7].name, amount: 0, month: 9,trans_type: "Expense")
+# UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[7].id, category_name: Category.all[7].name, amount: 0, month: 9,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[8].id, category_name: Category.all[8].name, amount: 50, month: 9,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[9].id, category_name: Category.all[9].name, amount: 40, month: 9,trans_type: "Expense")
-UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[11].id, category_name: Category.all[11].name, amount: 0, month: 9,trans_type: "Expense")
+# UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[11].id, category_name: Category.all[11].name, amount: 0, month: 9,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[12].id, category_name: Category.all[12].name, amount: 40, month: 9,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[10].id, category_name: Category.all[10].name, amount: -3000, month: 9,trans_type: "Income")
 
 
-UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: 1500.00, month: 10, trans_type: "Expense")
+UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: 900.00, month: 10, trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[1].id, category_name: Category.all[1].name, amount: 100.00, month: 10,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: 150.00, month: 10,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[3].id, category_name: Category.all[3].name, amount: 200.00, month: 10,trans_type: "Expense")
-UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[4].id, category_name: Category.all[4].name, amount: 0, month: 10,trans_type: "Expense")
+# UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[4].id, category_name: Category.all[4].name, amount: 0, month: 10,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[5].id, category_name: Category.all[5].name, amount: 300.00, month: 10,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[6].id, category_name: Category.all[6].name, amount: 50, month: 10,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[7].id, category_name: Category.all[7].name, amount: 25, month: 10,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[8].id, category_name: Category.all[8].name, amount: 50, month: 10,trans_type: "Expense")
-UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[9].id, category_name: Category.all[9].name, amount: 0, month: 10,trans_type: "Expense")
+# UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[9].id, category_name: Category.all[9].name, amount: 0, month: 10,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[11].id, category_name: Category.all[11].name, amount: 300, month: 10,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[12].id, category_name: Category.all[12].name, amount: 30, month: 10,trans_type: "Expense")
 UserCategory.create(user_id: User.all.first.id, user_name: User.all.first.name, category_id: Category.all[10].id, category_name: Category.all[10].name, amount: -3000, month: 10,trans_type: "Income")
 
 
 
-Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: -1500, date: Date.new(2020, 8,1), month: 8, description: "Rent", trans_type: "Expense", user_id: User.all.first.id)
+Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: -900, date: Date.new(2020, 8,1), month: 8, description: "Rent", trans_type: "Expense", user_id: User.all.first.id)
 Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[1].id, category_name: Category.all[1].name, amount: -189.30, date: Date.new(2020, 8,1), month: 8, description: "Con Ed Aug Bill", trans_type: "Expense", user_id: User.all.first.id)
 Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[1].id, category_name: Category.all[1].name, amount: -80, date: Date.new(2020, 8,2), month: 8, description: "Internet", trans_type: "Expense", user_id: User.all.first.id)
 Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: -62.52, date: Date.new(2020, 8,8), month: 8, description: "Trader Joe's", trans_type: "Expense", user_id: User.all.first.id)
@@ -117,7 +117,7 @@ Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Categ
 Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[10].id, category_name: Category.all[10].name, amount: 1500, date: Date.new(2020, 8,30), month: 8, description: "Paycheck", trans_type: "Income", user_id: User.all.first.id)
 
 
-Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: -1500, date: Date.new(2020,9,1), month: 9, description: "Rent", trans_type: "Expense", user_id: User.all.first.id)
+Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: -900, date: Date.new(2020,9,1), month: 9, description: "Rent", trans_type: "Expense", user_id: User.all.first.id)
 Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[1].id, category_name: Category.all[1].name, amount: -100, date: Date.new(2020,9,1), month: 9, description: "Con Ed Sept Bill", trans_type: "Expense", user_id: User.all.first.id)
 Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[1].id, category_name: Category.all[1].name, amount: -80, date: Date.new(2020,9,2), month: 9, description: "Internet", trans_type: "Expense", user_id: User.all.first.id)
 Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: -60.55, date: Date.new(2020,9,8), month: 9, description: "Trader Joe's", trans_type: "Expense", user_id: User.all.first.id)
@@ -142,7 +142,7 @@ Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Categ
 
 
 
-Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: -1500, date: Date.new(2020, 10,1), month: 10, description: "Rent", trans_type: "Expense", user_id: User.all.first.id)
+Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: -900, date: Date.new(2020, 10,1), month: 10, description: "Rent", trans_type: "Expense", user_id: User.all.first.id)
 Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[1].id, category_name: Category.all[1].name, amount: -80, date: Date.new(2020, 10,1), month: 10, description: "Con Ed Sept Bill", trans_type: "Expense", user_id: User.all.first.id)
 Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[1].id, category_name: Category.all[1].name, amount: -80, date: Date.new(2020, 10,2), month: 10, description: "Internet", trans_type: "Expense", user_id: User.all.first.id)
 Transaction.create(bank_account_id: BankAccount.all.first.id, category_id: Category.all[2].id, category_name: Category.all[2].name, amount: -26.55, date: Date.new(2020, 10,2), month: 10, description: "Trader Joe's", trans_type: "Expense", user_id: User.all.first.id)

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'api/v1/users/:id/bank_accounts', to: 'api/v1/users#retrieve_bank_accounts'
 
 
+
   
   
   resources :transactions
