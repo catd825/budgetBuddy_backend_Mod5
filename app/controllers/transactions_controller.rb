@@ -8,6 +8,11 @@ class TransactionsController < ApplicationController
         render json: transactions.to_json
     end
 
+    def new
+        transaction = Transaction.new
+    end
+
+
     def update
         @transaction.update(trans_params)
         if @transaction.valid?
@@ -17,11 +22,15 @@ class TransactionsController < ApplicationController
         end
     end
 
+
+
     private 
 
     def trans_params
-        params.require(:transaction).permit(:category_id, :bank_account_id, :amount, :category_name, :date, :trans_type, :description, :month) 
+        params.require(:transaction).permit(:user_id, :category_id, :bank_account_id, :amount, :category_name, :date, :trans_type, :description, :month) 
     end
+
+
 
     def find_trans
         @transaction = Transaction.find(params[:id])
