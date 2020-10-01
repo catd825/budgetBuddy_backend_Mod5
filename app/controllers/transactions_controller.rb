@@ -12,14 +12,15 @@ class TransactionsController < ApplicationController
         transaction = Transaction.new
     end
 
-    def create
-        transaction = Transaction.create(budget_params)
-        render json: transaction.to_json
-    end
+    # def create
+    #     transaction = Transaction.create(budget_params)
+    #     render json: transaction.to_json
+    # end
 
 
     def update
         @transaction.update(trans_params)
+        # byebug
         if @transaction.valid?
             render json: @transaction.to_json
         else
@@ -32,10 +33,13 @@ class TransactionsController < ApplicationController
     private 
 
     def trans_params
-        params.require(:transaction).permit(:category_id, :bank_account_id, :amount, :category_name, :date, :trans_type, :description, :month) 
+        params.require(:transaction).permit(:user_id, :category_id, :bank_account_id, :amount, :category_name, :date, :trans_type, :description, :month) 
     end
 
+
+
     def find_trans
+        # byebug
         @transaction = Transaction.find(params[:id])
     end
 
