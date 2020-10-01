@@ -19,7 +19,6 @@ class UserCategoriesController < ApplicationController
 
     def update
         @user_category.update(budget_params)
-        # byebug
         if @user_category.valid?
             render json: @user_category.to_json
         else

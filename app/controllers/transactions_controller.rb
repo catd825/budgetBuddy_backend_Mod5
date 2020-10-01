@@ -12,15 +12,9 @@ class TransactionsController < ApplicationController
         transaction = Transaction.new
     end
 
-    # def create
-    #     transaction = Transaction.create(budget_params)
-    #     render json: transaction.to_json
-    # end
-
 
     def update
         @transaction.update(trans_params)
-        # byebug
         if @transaction.valid?
             render json: @transaction.to_json
         else
@@ -39,7 +33,6 @@ class TransactionsController < ApplicationController
 
 
     def find_trans
-        # byebug
         @transaction = Transaction.find(params[:id])
     end
 
