@@ -1,24 +1,33 @@
-# README
+**budgetBuddy**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple way to create and modify monthly budgets and transactions.
 
-Things you may want to cover:
+**Demo**
+Video and Heroku coming soon!
 
-* Ruby version
+**Backend Prerequisites**
+Ruby on Rails
+PostgreSQL
 
-* System dependencies
+**Backend Installation Instructions**
+Once the repo is cloned, run the Rails server:
+```
+cd budgetBuddy_backend_Mod5
+bundle install
+```
 
-* Configuration
+Install the database:
 
-* Database creation
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
-* Database initialization
+Run the server
+```
+rails s
+```
 
-* How to run the test suite
+You may now proceed to start the front end [here](https://github.com/catd825/budgetBuddy_frontend_Mod5).
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

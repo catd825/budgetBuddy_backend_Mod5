@@ -1,0 +1,6 @@
+﻿User_Id,User_Name,Category_Id,Amount,Month,Trans_Type,Raw_Name
+User.all.first.id,User.all.first.name,Category.all[0].id,235,9,Expense,Category.all[0].name
+User.all.first.id,User.all.first.name,Category.all[1].id,234,9,Expense,Category.all[1].name
+User.all.first.id,User.all.first.name,Category.all[3].id,742,9,Expense,Category.all[3].name
+User.all.first.id,User.all.first.name,Category.all[4].id,562,9,Expense,Category.all[5].name
+User.all.first.id,User.all.first.name,Category.all[6].id,23,9,Expense,Category.all[6].name

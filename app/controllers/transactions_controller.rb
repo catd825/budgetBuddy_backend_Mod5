@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
-    before_action :find_trans, only: [:update]
+    before_action :find_trans, only: [:update, :destroy]
 
 
     def index
@@ -12,6 +12,10 @@ class TransactionsController < ApplicationController
         transaction = Transaction.new
     end
 
+    def create
+        transaction = Transaction.create(trans_params)
+        render json: transaction.to_json
+    end
 
     def update
         @transaction.update(trans_params)
@@ -22,6 +26,11 @@ class TransactionsController < ApplicationController
         end
     end
 
+    def destroy
+        @transaction.destroy
+        render json: @transaction.to_json
+    end
+
 
 
     private 
@@ -29,7 +38,6 @@ class TransactionsController < ApplicationController
     def trans_params
         params.require(:transaction).permit(:user_id, :category_id, :bank_account_id, :amount, :category_name, :date, :trans_type, :description, :month) 
     end
-
 
 
     def find_trans
