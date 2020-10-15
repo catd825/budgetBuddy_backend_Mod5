@@ -1,21 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 UserCategory.destroy_all
 Transaction.destroy_all
 Category.destroy_all
 BankAccount.destroy_all
 User.destroy_all
-
-# 1.times do
-#     User.create(name: "Cathy", username: "catd825", password_digest: "password")
-# end
-
 
 User.create!(name: 'Cathy',
              username: 'catd825',
@@ -38,11 +26,13 @@ Category.create(name: "Donations") #9
 Category.create(name: "Income") #10
 Category.create(name: "Travel") #11
 Category.create(name: "Subscriptions") #12
+Category.create(name: "Loans") #13
+Category.create(name: "Insurance") #13
 
 
 
-BankAccount.create(user_id: User.all.first.id, bank_name: Faker::Bank.name, account_type: "Checking")
-BankAccount.create(user_id: User.all.second.id, bank_name: Faker::Bank.name, account_type: "Checking")
+BankAccount.create(id: 1, user_id: User.all.first.id, bank_name: Faker::Bank.name, account_type: "Checking")
+BankAccount.create(id: 2, user_id: User.all.second.id, bank_name: Faker::Bank.name, account_type: "Checking")
 
 
 UserCategory.create(user_id: User.all.second.id, user_name: User.all.second.name, category_id: Category.all[0].id, category_name: Category.all[0].name, amount: 4000.00, month: 9, trans_type: "Expense")
